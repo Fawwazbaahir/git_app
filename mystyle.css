@@ -1,0 +1,147 @@
+/* Styling Dasar Footer */
+.site-footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  font-family: system-ui, -apple-system, sans-serif;
+  padding-top: 60px;
+  line-height: 1.6;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Kolom Branding & Alamat */
+.footer-logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.footer-logo span {
+  color: #38bdf8;
+}
+
+.brand-desc {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.footer-address {
+  font-style: normal;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  color: #cbd5e1;
+}
+
+.footer-contact p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+/* Kolom Sitemap */
+.footer-column h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-column h4::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #38bdf8;
+  margin-top: 8px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #38bdf8;
+}
+
+.badge {
+  background-color: #0284c7;
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 5px;
+}
+
+/* Baris Bawah (Copyright) */
+.footer-bottom {
+  background-color: #020617;
+  padding: 20px 0;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.social-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+/* Desain Responsif (Tampilan HP & Tablet) */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .social-links a {
+    margin: 0 10px;
+  }
+}
