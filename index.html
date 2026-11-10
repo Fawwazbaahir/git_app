@@ -1,79 +1,197 @@
-<H1>Header</H1>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="master-product.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navigasi utama">
+      <a class="brand" href="index.html">Nama<span>Perusahaan</span></a>
+      <p class="nav-label">MENU UTAMA</p>
+      <nav>
+        <a class="active" href="index.html" aria-current="page">Dashboard</a>
+        <a href="master-product.html">Master Product</a>
+      </nav>
+    </aside>
 
+    <div class="main-area">
+      <header class="topbar"><span>Dashboard Ringkasan</span><span class="account">Admin</span></header>
 
-<!-- BEGIN footer dari Andi : 20261110 -->
-<link rel="stylesheet" href="style.css">
-<footer class="site-footer">
-    <div class="footer-container">
-        <!-- Kolom 1: Profil Singkat & Alamat -->
-        <div class="footer-column brand-column">
-            <h3 class="footer-logo">Nama<span>Perusahaan</span></h3>
-            <p class="brand-desc">
-                Solusi digital terdepan untuk membantu pertumbuhan bisnis Anda secara berkelanjutan.
-            </p>
-            <address class="footer-address">
-                <strong>Kantor Pusat:</strong><br>
-                Jl. Jendral Sudirman No. 123, Lantai 5<br>
-                Jakarta Selatan, DKI Jakarta 12190<br>
-                Indonesia
-            </address>
-            <div class="footer-contact">
-                <p><strong>Email:</strong> info@perusahaan.com</p>
-                <p><strong>Telepon:</strong> (021) 555-1234</p>
+      <main class="content">
+        <div class="breadcrumb">Beranda <span>/</span> Dashboard</div>
+
+        <section class="heading">
+          <div>
+            <h1>Dashboard</h1>
+            <p>Pantau metrik penjualan, inventaris, dan aktivitas produk Anda secara real-time.</p>
+          </div>
+          <a class="primary" href="master-product.html">+ Kelola Produk</a>
+        </section>
+
+        <!-- Kartu Metrik / Statistik -->
+        <section class="stats-grid" aria-label="Ringkasan statistik">
+          <div class="stat-card">
+            <span class="stat-label">Total Produk</span>
+            <span class="stat-value">128</span>
+            <span class="stat-desc success">&uarr; +12 produk baru bulan ini</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Total Penjualan</span>
+            <span class="stat-value">Rp 48.750.000</span>
+            <span class="stat-desc success">&uarr; +15.3% dari bulan lalu</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Total Pesanan</span>
+            <span class="stat-value">1.240</span>
+            <span class="stat-desc info">98.2% berhasil diproses</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Stok Menipis</span>
+            <span class="stat-value">4</span>
+            <span class="stat-desc warning">&bull; Perlu restock segera</span>
+          </div>
+        </section>
+
+        <!-- Layout Konten Dashboard -->
+        <div class="dashboard-layout">
+          <!-- Tabel Produk Unggulan -->
+          <section class="card" aria-label="Produk terpopuler">
+            <div class="card-head">
+              <div>
+                <h2>Produk Unggulan</h2>
+                <p>Produk dengan transaksi tertinggi saat ini.</p>
+              </div>
+              <span class="count">5 produk</span>
             </div>
-        </div>
-
-        <!-- Kolom 2: Sitemap - Layanan -->
-        <div class="footer-column">
-            <h4>Layanan Kami</h4>
-            <ul class="footer-links">
-                <li><a href="#">Pengembangan Web</a></li>
-                <li><a href="#">Aplikasi Mobile</a></li>
-                <li><a href="#">Desain UI/UX</a></li>
-                <li><a href="#">Digital Marketing</a></li>
-                <li><a href="#">Cloud Hosting</a></li>
-                <li><a href="#">Konsultasi IT</a></li>
-            </ul>
-        </div>
-
-        <!-- Kolom 3: Sitemap - Perusahaan -->
-        <div class="footer-column">
-            <h4>Perusahaan</h4>
-            <ul class="footer-links">
-                <li><a href="#">Tentang Kami</a></li>
-                <li><a href="#">Tim Kami</a></li>
-                <li><a href="#">Karir</a> <span class="badge">Hiring</span></li>
-                <li><a href="#">Blog & Berita</a></li>
-                <li><a href="#">Portofolio</a></li>
-                <li><a href="#">Hubungi Kami</a></li>
-            </ul>
-        </div>
-
-        <!-- Kolom 4: Sitemap - Dukungan & Bantuan -->
-        <div class="footer-column">
-            <h4>Dukungan</h4>
-            <ul class="footer-links">
-                <li><a href="#">Pusat Bantuan</a></li>
-                <li><a href="#">Dokumentasi API</a></li>
-                <li><a href="#">Status Layanan</a></li>
-                <li><a href="#">Komunitas</a></li>
-                <li><a href="#">Syarat & Ketentuan</a></li>
-                <li><a href="#">Kebijakan Privasi</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Baris Bawah: Copyright & Media Sosial -->
-    <div class="footer-bottom">
-        <div class="footer-bottom-container">
-            <p>&copy; 2026 Perusahaan Anda. Seluruh hak cipta dilindungi undang-undang.</p>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <div class="table-wrap">
+              <table class="table-compact">
+                <thead>
+                  <tr>
+                    <th>Produk</th>
+                    <th>SKU</th>
+                    <th>Kategori</th>
+                    <th>Harga</th>
+                    <th>Stok</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Laptop Pro 14"</strong></td>
+                    <td>LAP-001</td>
+                    <td>Elektronik</td>
+                    <td>Rp 14.500.000</td>
+                    <td>24</td>
+                    <td><span class="badge-status success">Aktif</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mechanical Keyboard RGB</strong></td>
+                    <td>ACC-002</td>
+                    <td>Aksesoris</td>
+                    <td>Rp 850.000</td>
+                    <td>48</td>
+                    <td><span class="badge-status success">Aktif</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Wireless Mouse Ergonomis</strong></td>
+                    <td>ACC-003</td>
+                    <td>Aksesoris</td>
+                    <td>Rp 320.000</td>
+                    <td>65</td>
+                    <td><span class="badge-status success">Aktif</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Monitor LED 27" 4K</strong></td>
+                    <td>MON-004</td>
+                    <td>Elektronik</td>
+                    <td>Rp 4.200.000</td>
+                    <td>12</td>
+                    <td><span class="badge-status success">Aktif</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>USB-C Multi-Hub</strong></td>
+                    <td>ACC-005</td>
+                    <td>Aksesoris</td>
+                    <td>Rp 275.000</td>
+                    <td>3</td>
+                    <td><span class="badge-status warning">Stok Rendah</span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+            <div class="card-footer">
+              <a href="master-product.html">Lihat Semua di Master Product &rarr;</a>
+            </div>
+          </section>
+
+          <!-- Kolom Samping: Aksi Cepat & Aktivitas Terkini -->
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+            <!-- Aksi Cepat -->
+            <section class="card" aria-label="Aksi Cepat">
+              <div class="card-head">
+                <div>
+                  <h2>Aksi Cepat</h2>
+                  <p>Pintasan menu utama sistem.</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="quick-links">
+                  <a href="master-product.html" class="quick-btn">
+                    <span>+ Tambah Produk Baru</span>
+                    <span>&rarr;</span>
+                  </a>
+                  <a href="master-product.html" class="quick-btn">
+                    <span>Buka Master Product</span>
+                    <span>&rarr;</span>
+                  </a>
+                  <a href="#" class="quick-btn">
+                    <span>Laporan Penjualan</span>
+                    <span>&rarr;</span>
+                  </a>
+                  <a href="#" class="quick-btn">
+                    <span>Pengaturan Akun</span>
+                    <span>&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <!-- Aktivitas Terkini -->
+            <section class="card" aria-label="Aktivitas Terkini">
+              <div class="card-head">
+                <div>
+                  <h2>Aktivitas Terkini</h2>
+                  <p>Catatan log sistem terbaru.</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <ul class="activity-list">
+                  <li class="activity-item">
+                    <span class="activity-text">Stok <strong>USB-C Multi-Hub</strong> tersisa 3 unit</span>
+                    <span class="activity-time">10 mnt lalu</span>
+                  </li>
+                  <li class="activity-item">
+                    <span class="activity-text">Pesanan baru <strong>#INV-202611</strong> diterima</span>
+                    <span class="activity-time">45 mnt lalu</span>
+                  </li>
+                  <li class="activity-item">
+                    <span class="activity-text">Produk <strong>Laptop Pro 14"</strong> diperbarui</span>
+                    <span class="activity-time">2 jam lalu</span>
+                  </li>
+                  <li class="activity-item">
+                    <span class="activity-text">Sinkronisasi data kategori berhasil</span>
+                    <span class="activity-time">5 jam lalu</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
         </div>
+      </main>
     </div>
-</footer>
-<!-- END footer dari Andi : 20261110 -->
+  </div>
+</body>
+</html>
