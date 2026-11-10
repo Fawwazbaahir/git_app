@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alur Dokumen Bank</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,sans-serif;color:#172033;background:#f5f7fb}*{box-sizing:border-box}body{margin:0}.layout{display:flex;min-height:100vh}.sidebar{width:240px;flex:none;background:#0f172a;color:#cbd5e1;padding:28px 18px}.brand{display:block;color:#fff;font-size:19px;font-weight:700;text-decoration:none;margin:0 10px 44px}.brand span{color:#38bdf8}.nav-label{font-size:11px;letter-spacing:.12em;margin:0 12px 14px;color:#94a3b8}.sidebar nav{display:grid;gap:5px}.sidebar nav a{color:#cbd5e1;text-decoration:none;padding:12px;border-radius:8px;font-size:14px}.sidebar nav a:hover,.sidebar nav a.active{color:#fff;background:#1e3a5f}.main-area{min-width:0;flex:1}.topbar{height:68px;background:#fff;border-bottom:1px solid #e5eaf0;display:flex;align-items:center;padding:0 36px;font-size:14px;font-weight:600}.content{max-width:1100px;margin:auto;padding:32px 36px}.breadcrumb{font-size:13px;color:#718096;margin-bottom:22px}.breadcrumb span{padding:0 9px}h1{font-size:28px;margin:0 0 7px}.intro{color:#64748b;margin:0 0 28px;font-size:14px}.widget{background:#fff;border:1px solid #e5eaf0;border-radius:10px;display:grid;grid-template-columns:280px minmax(0,1fr);overflow:hidden}.steps{border-right:1px solid #e5eaf0;padding:20px 12px;display:grid;align-content:start;gap:3px}.step{width:100%;border:0;background:transparent;text-align:left;display:flex;align-items:center;gap:12px;padding:10px;border-radius:7px;color:#475569;font:14px system-ui;cursor:pointer}.step:hover{background:#f1f5f9}.step[aria-current="step"]{background:#eaf5fc;color:#075985;font-weight:650}.number{display:grid;place-items:center;flex:none;width:26px;height:26px;border:1px solid #cbd5e1;border-radius:50%;font-size:12px}.step[aria-current="step"] .number{border-color:#0284c7;background:#0284c7;color:#fff}.step.done .number{border-color:#15803d;color:#15803d}.panel{padding:32px;min-height:410px;display:flex;flex-direction:column}.progress-label{font-size:13px;color:#64748b;margin:0 0 10px}.progress{height:7px;background:#e5eaf0;border-radius:8px;overflow:hidden}.progress span{display:block;height:100%;background:#0284c7;transition:width .15s ease}.panel h2{font-size:23px;margin:32px 0 12px}.description{font-size:16px;line-height:1.65;color:#475569;margin:0}.note{font-size:13px;color:#64748b;background:#f8fafc;border:1px solid #e5eaf0;border-radius:8px;padding:14px;margin-top:24px;line-height:1.5}.actions{display:flex;justify-content:space-between;gap:12px;margin-top:auto;padding-top:32px}button.action{border:1px solid #cbd5e1;border-radius:7px;background:#fff;color:#334155;padding:10px 16px;font:600 14px system-ui;cursor:pointer}button.action.primary{background:#0284c7;border-color:#0284c7;color:#fff}button.action:hover:not(:disabled){filter:brightness(.94)}button.action:disabled{opacity:.45;cursor:default}button:focus-visible,a:focus-visible{outline:2px solid #0284c7;outline-offset:2px}@media(max-width:800px){.layout{display:block}.sidebar{width:auto;padding:16px}.brand{margin:0 0 12px}.nav-label{display:none}.sidebar nav{display:flex;flex-wrap:wrap}.topbar{height:56px;padding:0 18px}.content{padding:24px 16px}.widget{grid-template-columns:1fr}.steps{border-right:0;border-bottom:1px solid #e5eaf0;display:flex;overflow-x:auto;padding:12px}.step{min-width:160px}.panel{padding:24px;min-height:360px}}
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navigasi utama">
+      <a class="brand" href="index.html">Nama<span>Perusahaan</span></a>
+      <p class="nav-label">MENU UTAMA</p>
+      <nav><a href="index.html">Dashboard</a><a href="master-product.html">Master Product</a><a class="active" href="dokumen-bank.html" aria-current="page">Dokumen Bank</a></nav>
+    </aside>
+    <div class="main-area">
+      <header class="topbar">Manajemen Dokumen Bank</header>
+      <main class="content">
+        <div class="breadcrumb">Dashboard <span>/</span> Dokumen Bank</div>
+        <h1>Alur pembuatan dokumen bank</h1>
+        <p class="intro">Panduan langkah demi langkah berdasarkan dokumen di folder docs.</p>
+        <section class="widget" aria-label="Langkah pembuatan dokumen bank">
+          <nav class="steps" id="steps" aria-label="Daftar langkah"></nav>
+          <div class="panel">
+            <p class="progress-label" id="progress-label"></p>
+            <div class="progress" role="progressbar" aria-label="Progres panduan" aria-valuemin="1" aria-valuemax="10" id="progress"><span id="progress-fill"></span></div>
+            <h2 id="title"></h2>
+            <p class="description" id="description"></p>
+            <p class="note">Pastikan jenis dokumen, field wajib, aturan penomoran, alur persetujuan, dan proses posting sesuai aturan aplikasi Anda.</p>
+            <div class="actions"><button class="action" type="button" id="previous">Sebelumnya</button><button class="action primary" type="button" id="next">Berikutnya</button></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script>
+    const items = [
+      ['Akun user','Buat akun user dan berikan hak akses untuk membuat dokumen bank.'],
+      ['Master currency','Buat master currency yang akan dipakai pada dokumen.'],
+      ['Bank dan rekening','Buat atau pilih data bank dan rekening bank yang terkait.'],
+      ['Pihak terkait','Siapkan data pihak terkait, misalnya nasabah atau penerima, jika diperlukan.'],
+      ['Buat dokumen','Buat dokumen bank baru. Isi jenis dokumen, tanggal, nomor referensi, currency, nominal, rekening, dan keterangan.'],
+      ['Dokumen pendukung','Lampirkan dokumen pendukung jika proses bisnis mewajibkannya.'],
+      ['Periksa dan simpan','Periksa kelengkapan serta kecocokan data, lalu simpan sebagai draft.'],
+      ['Ajukan persetujuan','Ajukan dokumen untuk pemeriksaan atau persetujuan sesuai alur otorisasi.'],
+      ['Finalisasi','Setelah disetujui, finalisasi atau posting dokumen. Pastikan status dan nomor dokumen tercatat.'],
+      ['Verifikasi akhir','Verifikasi hasil akhir dan simpan bukti atau riwayat proses untuk audit.']
+    ];
+    let current = 0;
+    const steps = document.getElementById('steps');
+    items.forEach(([title], index) => { const button = document.createElement('button'); button.type = 'button'; button.className = 'step'; button.innerHTML = `<span class="number">${index + 1}</span><span>${title}</span>`; button.addEventListener('click', () => { current = index; render(); }); steps.append(button); });
+    function render(){
+      [...steps.children].forEach((button,index) => { button.classList.toggle('done', index < current); if(index === current) button.setAttribute('aria-current','step'); else button.removeAttribute('aria-current'); });
+      document.getElementById('progress-label').textContent = `Langkah ${current + 1} dari ${items.length}`;
+      document.getElementById('progress').setAttribute('aria-valuenow',current + 1);
+      document.getElementById('progress-fill').style.width = `${(current + 1) / items.length * 100}%`;
+      document.getElementById('title').textContent = items[current][0];
+      document.getElementById('description').textContent = items[current][1];
+      document.getElementById('previous').disabled = current === 0;
+      document.getElementById('next').disabled = current === items.length - 1;
+    }
+    document.getElementById('previous').addEventListener('click',() => { if(current > 0){current--;render();} });
+    document.getElementById('next').addEventListener('click',() => { if(current < items.length - 1){current++;render();} });
+    render();
+  </script>
+</body>
+</html>

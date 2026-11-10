@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Master Product</title>
+  <link rel="stylesheet" href="master-product.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navigasi utama">
+      <a class="brand" href="index.html">Nama<span>Perusahaan</span></a>
+      <p class="nav-label">MENU UTAMA</p>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a class="active" href="master-product.html" aria-current="page">Master Product</a>
+      </nav>
+    </aside>
+    <div class="main-area">
+      <header class="topbar"><span>Manajemen Produk</span><span class="account">Admin</span></header>
+      <main class="content">
+        <div class="breadcrumb">Dashboard <span>/</span> Master Product</div>
+        <section class="heading">
+          <div><h1>Master Product</h1><p>Kelola daftar dan informasi produk Anda.</p></div>
+          <button class="primary" type="button">+ Tambah Produk</button>
+        </section>
+        <section class="card" aria-label="Daftar produk">
+          <div class="card-head"><div><h2>Daftar Produk</h2><p>Semua produk tersimpan di sini.</p></div><span class="count">0 produk</span></div>
+          <div class="filters">
+            <label class="search"><span>Cari produk</span><input type="search" placeholder="Cari nama atau SKU produk"></label>
+            <label><span>Kategori</span><select><option>Semua kategori</option></select></label>
+            <label><span>Status</span><select><option>Semua status</option><option>Aktif</option><option>Nonaktif</option></select></label>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>Produk</th><th>SKU</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Status</th><th>Aksi</th></tr></thead><tbody><tr><td colspan="7" class="empty"><strong>Belum ada produk</strong><span>Produk yang ditambahkan akan tampil di sini.</span></td></tr></tbody></table></div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
