@@ -1,0 +1,14 @@
+Flow pembuatan 1 dokumen bank
+
+1. Buat akun user dan berikan hak akses untuk membuat dokumen bank.
+2. Buat master currency yang akan dipakai pada dokumen.
+3. Buat atau pilih data bank dan rekening bank yang terkait.
+4. Siapkan data pihak terkait (misalnya nasabah atau penerima), jika diperlukan.
+5. Buat dokumen bank baru, lalu isi jenis dokumen, tanggal, nomor referensi, currency, nominal, rekening, dan keterangan.
+6. Lampirkan dokumen pendukung jika proses bisnis mewajibkannya.
+7. Periksa kembali kelengkapan dan kecocokan data, lalu simpan sebagai draft.
+8. Ajukan dokumen untuk pemeriksaan atau persetujuan sesuai alur otorisasi.
+9. Setelah disetujui, finalisasi atau posting dokumen dan pastikan status serta nomor dokumen tercatat.
+10. Verifikasi hasil akhir dan simpan bukti atau riwayat proses untuk audit.
+
+Hal yang perlu dipastikan sesuai aplikasi: jenis dokumen bank, field wajib, aturan penomoran, alur persetujuan, serta apakah proses finalisasi/posting tersedia.
